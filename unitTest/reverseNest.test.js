@@ -10,7 +10,7 @@ test('範例input，預期輸出範例中output', () => {
             }
         }
     };
-    let outputValue = {
+    const outputValue = {
         I: {
             deserve: {
                 to: {
@@ -27,6 +27,6 @@ test('範例input，預期輸出範例中output', () => {
 test("異常輸入測試", () => {
     expect(() => reverseNest({ deserve: null })).toThrow("invalid input");
     expect(() => reverseNest(null)).toThrow("invalid input");
-    expect(() => reverseNest({ hired: 'I',  test: 'invalid'})).toThrow("invalid input");
-    expect(() => reverseNest({ deserve: {}})).toThrow("invalid input");
+    expect(() => reverseNest({ hired: 'I', test: 'invalid' })).toThrow("invalid input");
+    expect(() => reverseNest({ deserve: {} })).toThrow("invalid input");
 });
